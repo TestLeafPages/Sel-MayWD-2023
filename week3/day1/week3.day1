@@ -1,0 +1,62 @@
+Todays Agenda:
+   09:15-09:40-Live Quiz
+   09:40-10:40-Adavance Xpath
+   10:45-11:20-Classroom+Break
+   11:15-11:55-Continue with Xpath
+   11:55-12:15-Classroom
+   12:15-12:30-Webdriver methods
+   12:30-12:35-Recap
+
+Locators
+id,name,classname
+
+Basic Xpath
+collection based xpath-
+
+
+1.P-c
+basic xpath/tagname of child
+
+//div[@id='form']/form
+
+
+2.gp-gc
+basic xpath gp//tagname of gc
+//form[@id='login']//input
+//li[@class='navlink']//span[contains(text(),'Men')]
+
+3. c-P
+
+basic xpath forchild/parent::tag name of tag
+
+//input[@id='createLeadForm_companyName']/parent::td
+
+4.gc-gp
+
+basic xpath for gc/ancestor::tagname gp
+//input[@id='password']/ancestor::form
+
+5.ES - YS
+
+basic xpath ES/following-sibling::tagname YS
+//span[@class='labelIcon']/following-sibling::span
+
+6.YS-ES  
+basic xpath for YS/preceding-sibling:: tagname ES
+//a[text()='ABOUT US']/preceding-sibling::p
+
+//span[text()=': Mobile Publisher']/preceding-sibling::span
+
+7.EC toYC
+basic xpathfor EC/following:: tagname to YC
+//label[text()='Flying Machine']/following::input
+
+8.YCtoEC
+basic xpath for YC/preceding::tahe of EC
+//label[text()='Password']/preceding::input
+
+
+
+
+
+
