@@ -1,0 +1,62 @@
+Todays Agenda:
+
+   09:30-10:40-Abstraction
+   10:40-11:10-Classroom+Break
+   11:10-12:15-Collection-List
+   12:15-12:35-Classroom
+
+Abstraction:
+Hiding the implementation,its not important to us know it.
+
+
+keywords
+class - class  -extends
+class - interface- implements
+class- abstract class-- extends
+
+Abstraction:
+interface (100% abstract metho)
+abstract class- will both implementation and unimplememtation method (0 to 100% abstract)
+concrete class--execution class(all method should me implementation)
+
+
+interface and concrete -all method implementation
+
+
+
+List
+datatype-wrapper class
+int-Integer
+char-Character
+boolean-boolean
+
+   syntax
+
+   List<Integer> rollNo= new ArrayList<Integer>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstraction:
+
+   Abstraction means hiding the complexity and only showing the essential
+feature of the object.
+
+Hiding implementation details and showing functionality to the user.
+
+eg:mobile,ATM
