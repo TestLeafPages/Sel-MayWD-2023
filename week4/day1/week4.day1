@@ -1,0 +1,76 @@
+Todays Agenda:
+
+   09:40-10:40-Alert
+   10:40-11:05-Breakout& Break
+   11:15-12:15-Frame
+   12:15-12:35-Breakout
+   12:35-12:45-Recap
+      
+Target locators
+==================
+1.Alert
+2.Frame
+3.Window handling
+
+
+Alert-
+
+prompt alert
+
+1.launch browser and load url
+2.click on show button
+3.pass driver control to alert
+4.get text from alert
+5.pass value
+6.accpect
+7.print text
+
+
+Frame
+======
+iframe- inline -frame
+
+frame two ways we can find it 
+===============================
+1.inspect webpage and type as iframe
+2.if right on the webpage we can view frame
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assignment
+
+a)Launch the browser
+b)Load the url https://www.irctc.co.in/nget/train-search
+c)Enter MS in ‘From’ textbox
+d)Enter Cape in ‘To’ textbox
+e)Click search button 
+f)Click refresh button
+g)Click WL and Click BookNow button
+e)Click No button in the alert
+
+
+
+
+
+
+a)Launch the browser
+b)Load the url https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm
+c)Check the frame present if yes Handle the frame
+d)Click Try It Button
+e)Click OK/Cancel in the alert
+f)Confirm the action is performed correctly by verifying the text
+Hint!!
+Switch to the frame
+Then click Try It with xpath
+Then perform accept / dismiss
+Get the text using id Verify the text based on the action
