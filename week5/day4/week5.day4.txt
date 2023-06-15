@@ -1,0 +1,29 @@
+Todays Agenda:
+
+   09:30-10:15-Common Integration
+   10:15-10:45-Breakout+Break
+   11:10-11:40-Explicity Wait
+   11:40-11:50-Break
+   11:50-12:30-static
+
+
+   wait
+   ===
+1.thread.sleep();-java wait
+
+untill what time i given it wait
+
+   1.Implicit wait-selenium
+   findelement and findelements
+
+   2.Explicity wait
+   its based on condititon ,it will be wait.
+
+
+
+   static
+   ==============
+
+   1.it is for common data
+   2.it will have only one copy  for static data
+   2.if statc value is replaced with anew value the old vlaue will be overriden
