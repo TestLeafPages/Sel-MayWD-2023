@@ -1,0 +1,59 @@
+Todays agenda:
+
+    9:30 - 10:00 -> Introduction to BDD
+    10:00 - 10:30 -> How to generate feature file
+    10:30 - 11:20 -> Breakout+Break
+    11:20 - 12:00 -> Stepdefinition and Runner
+    12:00 - 12:15 -> Breakout
+    12:15 - 12:30 -> Parameterization
+
+
+Steps :
+  1.Create 3 packages for each layers of Cucumber
+    -features
+       - Create feature file -> Right click on features package->click New->click Other
+       - click file under General folder-> Give filename->Login.feature
+    -steps
+       - Create StepDefintion class 
+       - Create methods in the StepDefinition for each steps  in the Scenario
+    -runner    
+
+
+Parameterization:
+
+   1. Identify the data in the feature file
+       -username,password
+   2. Surround the data with ''
+   3. Replace the data which is surrounded with '' as {string} in the StepDefintion
+   4. Pass input arguments to the method and replace the hardcoded data with the arguments
+
+
+How to pass multiple data using ScenarioOutline:
+1. To pass multiple data for a single scenario the Ghekin keyword used is Scenario Outline
+2. In Scenario Outline identify the dynamic data and replace that with <>
+    ex: <companyname>
+3. Under Examples keyword create pipeline symbol and mention the column name
+   ex: |companyname|
+   Note: The nae should exactly match
+    -Pass the values in the second row of Examples
+    ex: |TestLeaf|  (1st set of data)
+        |Qeagle|    (2nd set of data)
+
+4.Go to the StepDefinition and replace <companyname> with (.*)$
+5.Pass Input arguments to the method and replace the hardcoded value withe the argument        
+
+InvalidMethodException:
+  - You're not allowed to extend classes that define Step Definitions or hooks
+
+Hooks Implementation:
+   Cucumber Annotations - > Hooks in Ruby Language
+   Hooks:
+       @Before :
+          -is to have common precondition for each scenario
+        @After : 
+           - is to have common postcondition for each scenario
+
+tags:
+   -to categerize the scenarios
+                
+      
