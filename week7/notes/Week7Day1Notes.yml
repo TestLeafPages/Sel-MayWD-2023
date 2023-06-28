@@ -1,0 +1,51 @@
+Today's Agenda:
+   - 9:30 - 10:30  -> Excel Integration
+   - 10:30 - 11:00 -> Breakout
+   - 11:00 - 12:00 -> POM-Multilingual
+   - 12:00 - 12:30 -> Breakout
+
+ Steps to Integrate Excel:
+   1. Create data folder inside the project(Right Click on the project -> click folder -> data -> finish)
+   2. Create excel sheet within data folder
+       rightclick on data folder -> ShowIn -> System Explorer -> double click data folder -> create new 
+       microsoft excel worksheet-> give name for excel sheet 
+   3. Create utils package under src/main/java and put ReadExcel class inside this
+   4. Create sendData() inside ProjectSpecificMethods and annotate with @DataProvider
+   5. Inside sendData() call ReadExcel.readData(excelFileName) and declare excelFileName globally
+   6. return ReadExcel and change return type to String[][]
+   7. Create setValues() inside the testcase VerifyLogin
+   8. Annotate setValues() with @BeforeTest
+   9. Inside this method mention excelFilename 
+      ex: excelFileName="Login";
+  10. With @Test(dataProvider="sendData")
+  11. Finally pass input arguments for the method
+  12. Replace all the hardcoded data with the arguments.    
+
+
+   Excel workbook:
+     - Workbook (name)
+        -WorkSheets (sheetname/sheet index)
+          -Row 
+            -columns (cell)
+
+
+
+  @BeforeSuite(startReport())
+
+      @BeforeTest(setValues())
+
+          @BeforeClass(testcaseDetails())
+            
+            @DataProvider(sendData()) 
+             
+              @BeforeMethod(precondition())
+
+                  @Test (runLogin())
+
+               @AfterMethod (postcondition())
+
+          @AfterClass(Nil)
+
+      @AfterTest(Nil)
+
+   @AfterSuite    (stopReport())                     

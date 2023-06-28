@@ -1,0 +1,90 @@
+Today's Agenda:
+   - 9:30 - 10:30   -> Exception Handling
+   - 10:30 - 11:00  -> Breakout
+   - 11:00 - 12:30  -> Extent Report Integration
+
+   Exception:
+      - It is an abnormal behaviour which disrupts the normal execution of the program
+
+   Types of Exceptions:
+      - RunTime / Unchecked Exception
+      - CompileTime  / checked Exception
+   All the Selenium Exceptions are RunTime Exceptions
+      - NoSuchElementException
+      - StaleElementReferenceException
+      - TimeOutException
+      - NoAlertPresentException  
+
+  Exception Handling:
+      Is to execute a program without any interruption
+
+
+  try      try    try
+  catch    catch    try
+           catch    catch
+           catch  catch
+
+
+throw:
+   it is used within a method to manually throw an exception
+throws:
+   it is used in the method declaration to indicate the exceptions that a method may throw whoever calls              
+    TestNg & Cucumber Reports -> Primitive reports
+
+Extent Report: 3.1.5 (completely free version)
+    1. Graphical representation for the status
+    2. Screenshot can be attached to the report to have better reporting
+    3. Different reports based in the category and authors
+    4. Rich look HTML summary report will be generated
+
+Classes:
+   - ExtentHTMLReporter  - Used to setup the physical html file
+   - EXtentReport - to capture the actual data from the test case execution
+   - ExtentTest - to create testcases in the report
+   - MediaEntityBuilder - to attach screenshot to the report
+
+Steps:
+1.Create startReport() in the ProjectSpecificMethods  and annotate with @BeforeSuite
+2.In testcases class set all the values in the setValues() and annotate with @BeforeTest
+3.Create testcaseDetails() in the ProjectSpecificMethods  and annotate with @BeforeClass
+
+
+ThreadLocal Implementation:
+   TestNG parallel Execution + cucumber ?
+
+ThreadLocal :
+   It is a Java class to run multiple threads (testcases) in parallel without having
+   any interaction between the parallel threads.
+
+Encapsulation:
+   Binding private variables with methods
+Setter method:
+   to set values for a private variable
+Getter method:
+   to get values from a private variable
+
+Steps to implement ThreadLocal :
+  1. Create a private static final ThreadLocal variable and mention the type of it
+     ex: private static final ThreadLocal<RemoteWebDriver>  rd = new ThreadLocal<>(); 
+  2. create setDriver() and initialize ChromeDriver() by calling set using threadlocal instance
+       public void setDriver() {
+	
+        rd.set(new ChromeDriver());
+	}
+  3. Create getDriver() and get the value using get() from ThreadLocal
+       	public RemoteWebDriver getDriver() {
+//	 RemoteWebDriver remoteWebDriver = rd.get();
+//	 System.out.println(remoteWebDriver);
+		
+	 return rd.get();
+	}
+
+   4. At PreCondition() -> @BeforeMethod
+       -> Comment driver = new ChromeDriver() and call setDriver()
+       -> replace driver with getDriver() in all the classes within your project
+           
+
+
+
+
+
